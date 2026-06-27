@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/754a3808be.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>To Do List</title>
+  </head>
+  <body class="the-body">
+    <main class="main-content">
+      <aside class="side-bar">
+        <div class="side-bar-title">
+          <div class="header-title">
+            <i class="fa-regular fa-square-check icon"></i>
+            <h2>TaskFlow</h2>
+          </div>
+          <p>Stay organized, get things done.</p>
+        </div>
+        <div class="categories">
+          <div class="tot-tasks task">
+            <i class="fa-solid fa-clipboard-list icon"></i>
+            <div class="tot-tasks-content content">
+              <span>Total Tasks</span>
+              <span class="tot-counter">0</span>
+            </div>
+          </div>
+          <div class="completed-tasks task">
+            <i class="fa-regular fa-circle-check icon"></i>
+            <div class="completed-tasks-content content">
+              <span>Completed Tasks</span>
+              <span class="done-task">0</span>
+            </div>
+          </div>
+          <div class="remain-tasks task">
+            <i class="fa-regular fa-clock icon"></i>
+            <div class="remain-tasks-content content">
+              <span>Remaining Tasks</span>
+              <span class="remain-task">0</span>
+            </div>
+          </div>
+
+          <div class="review-tasks task">
+            <i class="fa-solid fa-quote-right icon"></i>
+            <p>Discipline is the bridge between goals and accomplishment.</p>
+          </div>
+        </div>
+      </aside>
+      <section class="main-section">
+        <div class="content-title">
+          <div class="title">
+            <h1>My To-Do List</h1>
+            <p>Plan your day. Track your progress. Achieve more.</p>
+          </div>
+          <button type="button">
+            <i class="fa-regular fa-moon"></i>
+            Dark Mode
+          </button>
+        </div>
+        <form class="the-form">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="What do you need to do?"
+          />
+          <button id="task-button" type="submit">
+            <i class="fa-solid fa-plus"></i>
+            Add Task
+          </button>
+          <div class="alert-message"></div>
+        </form>
+        <div class="cards">
+          <!--! TO DO  Card-->
+          <div class="card">
+            <div class="todo-header">
+              <div class="todo-header-title">
+                <i class="fa-solid fa-clipboard-list icon"></i>
+                <span>To Do</span>
+              </div>
+              <span class="counter">0</span>
+            </div>
+            <ul class="task-list" id="list-div"></ul>
+          </div>
+          <!--! DOING Card -->
+          <div class="card">
+            <div class="todo-header">
+              <div class="todo-header-title doing">
+                <i class="fa-regular fa-clock icon"></i>
+                <span>Doing</span>
+              </div>
+              <span class="counter" id="doing-counter">0</span>
+            </div>
+            <div class="doing-div">
+              <ul id="doing-list"></ul>
+            </div>
+          </div>
+          <!--! DONE Card-->
+          <div class="card">
+            <div class="todo-header">
+              <div class="todo-header-title done">
+                <i class="fa-regular fa-circle-check icon"></i>
+                <span>Done</span>
+              </div>
+              <span class="counter" id="done-counter">0</span>
+            </div>
+            <div class="done-div">
+              <ul id="done-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
